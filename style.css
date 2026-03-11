@@ -27,6 +27,7 @@ body{
 
 .container{
     padding-bottom: 0%;
+    padding-top: 1%;
 }
 
 nav{
@@ -787,6 +788,9 @@ nav .fas{
 }
 
 @media only screen and (max-width: 980px){
+    #container {
+        padding-top: 5%;
+    }
     nav .fas{
         display: block;
         font-size: 50px;
@@ -858,6 +862,9 @@ nav .fas{
 }
 
 @media only screen and (max-width: 600px){
+    #container {
+        padding-top: 10%;
+    }
     #header{
         background-position-x: 50%;
     }
