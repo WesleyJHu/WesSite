@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,80 +10,85 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/cc3bd3248b.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-<div id="contact">
-    <div id="container">
-        <nav>
-            <a href="index.html"><img src="images/logo2.png" class="logo"></a>
-            <ul id = "sidemenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="hobbies.html">Hobbies</a></li>
-                <li class="active"><a href="contact.html">Contact</a></li>
-                <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
-            </ul>
-            <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="row contact-row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-regular fa-envelope"></i>wesleyjhu14@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i>703-640-4731</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/WesleyJHu/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/weswes2EPYC" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.instagram.com/sciwes/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@wesleyhu4288" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    <div id="contact">
+        <div id="container">
+            <nav>
+                <a href="index.html"><img src="images/logo2.png" class="logo"></a>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li class="active"><a href="contact.html">Contact</a></li>
+                    <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="row contact-row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-envelope"></i>REDACTED</p>
+                    <p><i class="fa-solid fa-phone"></i>REDACTED</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/WesleyJHu/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/weswes2EPYC" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/sciwes/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@wesleyhu4288" target="_blank"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <a href="Redacted_WesleyHu_Resume.pdf" target="_blank" class="btn btn2">Download CV (Contact me through official channels for unredacted CV)</a>
                 </div>
-                <a href="WesleyHu_Resume.pdf" target="_blank" class="btn btn2">Download CV</a>
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
             </div>
         </div>
     </div>
-</div>
-  
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzCbD--DmJqk3TUAl0gfJESbxfgBM4HaM5mAXz1_HxtYwIL-It1kmrAJh1dUf8550Bw/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
 
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        msg.innerHTML = "Sending Message..."
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzCbD--DmJqk3TUAl0gfJESbxfgBM4HaM5mAXz1_HxtYwIL-It1kmrAJh1dUf8550Bw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            msg.innerHTML = "Sending Message..."
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
         })
-        .catch(error => console.error('Error!', error.message))
-    })
-</script>
+    </script>
 
-<script>
-    var sidemenu = document.getElementById("sidemenu")
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
 
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
 
-    function closemenu(){
-        sidemenu.style.right = "-150px";
-    }
-</script>
+        function closemenu() {
+            sidemenu.style.right = "-150px";
+        }
+    </script>
 
 </body>
+
 </html>
