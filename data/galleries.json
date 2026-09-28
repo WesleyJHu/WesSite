@@ -283,5 +283,25 @@
             "src": "./images/ViperView/posterjpg.jpg"
           }
       ]
+    },
+    {
+      "name" : "Sky-C2",
+      "images" : [
+          {
+            "src": "./images/Sky-C2/teamaward.JPG"
+          },
+          {
+            "src": "./images/Sky-C2/UPSflying.jpg"
+          },
+          {
+            "src": "./images/Sky-C2/plane_landed.jpg"
+          },
+          {
+            "src": "./images/Sky-C2/team1.JPG"
+          },
+          {
+            "src": "./images/Sky-C2/team2.JPG"
+          }
+      ]
     }
   ]
